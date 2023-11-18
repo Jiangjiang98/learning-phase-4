@@ -11,7 +11,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     // where id is equal to the id param
     where: { id: Number(id) },
     // include owner data
-    include: { owner: true },
+    include: { owner: true, weights: true },
   })
   // return Response with pets to json
   return NextResponse.json({ pet })
